@@ -8,6 +8,7 @@ import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import { Modal, Container } from "react-bootstrap";
 import { chain_info } from "./chain";
+import wallet from "../Assets/wallet.png";
 
 var qs = require("qs");
 
@@ -103,21 +104,14 @@ const NetworkButton = () => {
       {!connected(injected) && !connected(walletconnect) && (
         <>
           <button
+            cla
             type="button"
-            className="connect-wallet desktop-connect"
+            className="connect-wallet"
             disabled={disabled}
             onClick={(e) => handleShow(e)}
           >
-            Connect Wallet
-          </button>
-
-          <button
-            type="button"
-            className="connect-wallet mobile-connect"
-            disabled={disabled}
-            onClick={(e) => handleShow(e)}
-          >
-            Connect Wallet
+            <img src={wallet} alt="img" />
+            <span>Connect Wallet</span>
           </button>
         </>
       )}
@@ -129,7 +123,7 @@ const NetworkButton = () => {
         <>
           <button
             type="button"
-            className="connect-wallet desktop-connect"
+            className="connect-wallet"
             onClick={() => {
               if (connected(walletconnect)) {
                 connector.close();

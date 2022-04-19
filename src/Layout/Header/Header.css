@@ -1,7 +1,7 @@
 header {
   position: relative;
   width: 80%;
-  z-index: 1;
+  z-index: 9999;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -48,17 +48,7 @@ header .menu li a {
   color: #00498a;
   margin-right: 1.9rem;
 }
-header .menu li button {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #00498a;
-  margin-right: 1.9rem;
-}
 header .menu li:last-child a {
-  margin-right: 0;
-}
-
-header .menu li:last-child button {
   margin-right: 0;
 }
 
@@ -82,6 +72,7 @@ header .menu li:last-child button {
   gap: 10px;
   font-weight: bold;
   justify-content: center;
+  border: none;
 }
 .connect-wallet img {
   max-width: 15%;
@@ -105,15 +96,6 @@ header .menu li:last-child button {
 }
 .menu .header_arcane_box a,
 .menu .header_connect a {
-  padding: 1.2rem 1.3rem 0.8rem 1.3rem;
-  color: #3adf00 !important;
-  font-size: 2rem !important;
-  background-color: #f3fcff;
-  border-radius: 2.1rem;
-}
-
-.menu .header_arcane_box button,
-.menu .header_connect button {
   padding: 1.2rem 1.3rem 0.8rem 1.3rem;
   color: #3adf00 !important;
   font-size: 2rem !important;
@@ -146,48 +128,7 @@ header .menu li:last-child button {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
   padding: 3px 10px;
 }
-/*======================
-  Hamburger-menu style
-========================*/
-/* .hamburger-menu {
-  cursor: pointer;
-  display: none;
-}
 
-
-.hamburger-menu span {
-  background: #00498a;
-  width: 3rem;
-  height: 0.2rem;
-  display: block;
-  margin: 0.5rem 0;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.hamburger-menu:hover .line-top {
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-.hamburger-menu:hover .line-bottom {
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
-}
-.hamburger-menu .line-top.current {
-  -webkit-transform: translateY(365%) rotate(135deg);
-  -ms-transform: translateY(365%) rotate(135deg);
-  transform: translateY(365%) rotate(135deg);
-}
-.hamburger-menu .line-center.current {
-  opacity: 0;
-}
-.hamburger-menu .line-bottom.current {
-  -webkit-transform: translateY(-325%) rotate(-135deg);
-  -ms-transform: translateY(-325%) rotate(-135deg);
-  transform: translateY(-325%) rotate(-135deg);
-} */
 .hamburger {
   max-width: 13%;
   object-fit: contain;
@@ -210,7 +151,7 @@ header .menu li:last-child button {
   justify-content: space-between;
   background-color: #2e3190;
   border: 0.5rem solid #fff;
-  padding: 0.3rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 2.5rem;
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.8);
   transition: 0.3s;
@@ -263,11 +204,6 @@ header .menu li:last-child button {
 }
 @media screen and (max-width: 1347px) {
   header .menu li a {
-    font-size: 1.6rem;
-    margin-right: 1.9rem;
-  }
-
-  header .menu li button {
     font-size: 1.6rem;
     margin-right: 1.9rem;
   }
@@ -383,9 +319,6 @@ header .menu li:last-child button {
   header .menu li a {
     margin-right: 0;
   }
-  header .menu li button {
-    margin-right: 0;
-  }
   .hum_col {
     display: flex;
     align-items: center;
@@ -395,7 +328,8 @@ header .menu li:last-child button {
     margin-top: 0;
   }
   .header_connect {
-    margin: 1rem 0rem;
+    margin: 0rem;
+    margin-bottom: 1rem;
     gap: 10px;
   }
   .connect-wallet,

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Slider.css";
-//import { owners } from "../MysteryIndex/MysteryIndex";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import Owner from "../../../Assets/Group 356.png";
@@ -23,7 +22,7 @@ import epic from "../../../Assets/Slider/epic (1).png";
 import epic2 from "../../../Assets/Slider/epic (2).png";
 import star from "../../../Assets/star.svg";
 import eye from "../../../Assets/eye.png";
-
+import letter from "../../../Assets/a.svg";
 //open slider desktop-------------------------------------------------------
 import silverOpen1 from "../../../Assets/Slider/Open slider/SILVER/3.png";
 import silverOpen2 from "../../../Assets/Slider/Open slider/SILVER/1.png";
@@ -61,7 +60,6 @@ import epicOpen2_bgPhone from "../../../Assets/Slider/Open-phone-slider/EPIC/MAS
 import legendOpen1_bgPhone from "../../../Assets/Slider/Open-phone-slider/LEGENDARY/THE-LIGHT-KNIGHT-ARC.png";
 import legendOpen2_bgPhone from "../../../Assets/Slider/Open-phone-slider/LEGENDARY/GOLDEN-ARC.png";
 function Slider({ darkMode }) {
-  const MysteryIndex = require("../MysteryIndex/MysteryIndex")
   const images = [
     silver3,
     silver2,
@@ -361,7 +359,7 @@ function Slider({ darkMode }) {
 
     const dataSet = e.target.dataset.num;
     data.forEach((elem) => {
-      if (parseInt(elem.num) === parseInt(dataSet)) {
+      if (elem.num == dataSet) {
         setDesc(elem.desc);
         setColor(elem.color);
         setImg(elem.img);
@@ -451,7 +449,7 @@ function Slider({ darkMode }) {
           <div className="owners-div">
             <img src={Owner} alt="" className="owner" />
             <p className="owner-p">
-              600 <br /> 
+              600 <br /> OWNERS
             </p>
           </div>
         </div>

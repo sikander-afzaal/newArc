@@ -10,17 +10,13 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import NetworkButton from "../../Helper/NetworkButton";
 
-
-
 function Header({ darkSet, click, loadWeb3Modal }) {
   const [darkMode, setDark] = useState(false);
   const [active, setActive] = useState(false);
   const [show, setShow] = useState(false);
   const [darkHead, setDarkHead] = useState(false);
 
-  
-
-  const foo = '#';
+  const foo = "#";
   const darker = (e) => {
     setDarkHead((prev) => {
       return !prev;
@@ -44,8 +40,9 @@ function Header({ darkSet, click, loadWeb3Modal }) {
   return (
     <>
       <header
-        className={`d-flex align-items-center ${show ? "scroll" : ""}  ${darkHead ? "header-color" : ""
-          }`}
+        className={`d-flex align-items-center ${show ? "scroll" : ""}  ${
+          darkHead ? "header-color" : ""
+        }`}
       >
         <div className="left-header">
           <div className="logo_area">
@@ -56,10 +53,14 @@ function Header({ darkSet, click, loadWeb3Modal }) {
         </div>
         <div className="center-header">
           <ul
-            className={`menu ${active ? `current ${darkHead ? "dark" : ""}` : ""
-              }`}
+            className={`menu ${
+              active ? `current ${darkHead ? "dark" : ""}` : ""
+            }`}
           >
-            <li onClick={darker} className={`switch ${darkMode ? "active" : ""}`}>
+            <li
+              onClick={darker}
+              className={`switch ${darkMode ? "active" : ""}`}
+            >
               <img src={light} alt="" />
               <img src={dark} alt="" />
             </li>
@@ -69,7 +70,6 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               }}
               className="cross"
             >
-
               <i className="far fa-times"></i>
             </li>
 
@@ -97,7 +97,13 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               }}
               className="bottom-border soon"
             >
-              <a target="_blank" rel="noreferrer" href="https://arctoken.net/nft/profile" >PROFILE</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://arctoken.net/nft/profile"
+              >
+                PROFILE
+              </a>
             </li>
 
             <li
@@ -114,7 +120,13 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               }}
               className="bottom-border soon"
             >
-              <a target="_blank" rel="noreferrer" href="https://arctoken.net/nft/home" >MARKET PLACE</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://arctoken.net/nft/home"
+              >
+                MARKET PLACE
+              </a>
             </li>
             <li
               onClick={() => {
@@ -122,7 +134,13 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               }}
               className="bottom-border soon"
             >
-              <a target="_blank" rel="noreferrer" href="https://arctoken.net/nft/my-items" >MY ITEMS</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://arctoken.net/nft/my-items"
+              >
+                MY ITEMS
+              </a>
             </li>
             <li
               onClick={() => {
@@ -130,30 +148,43 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               }}
               className="bottom-border soon"
             >
-              <a target="_blank" rel="noreferrer" href="https://arctoken.net/nft/profile" >PROFILE SETTING</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://arctoken.net/nft/profile"
+              >
+                PROFILE SETTING
+              </a>
             </li>
 
             <li className="bottom">
               <div className="top-bottom">
                 <div className="social-div-footer mobile-menu">
                   <div className="icon-div">
-                    <a target="_blank" rel="noreferrer" href="https://t.me/ArcaneTokenBNB">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://t.me/ArcaneTokenBNB"
+                    >
                       <i className="fab fa-telegram-plane"></i>
                     </a>
                     <a
-                      target="_blank" rel="noreferrer"
+                      target="_blank"
+                      rel="noreferrer"
                       href="https://twitter.com/arcanetokenbnb?s=21"
                     >
                       <i className="fab fa-twitter"></i>
                     </a>
                     <a
-                      target="_blank" rel="noreferrer"
+                      target="_blank"
+                      rel="noreferrer"
                       href="https:instagram.com/arcanetokenbnb?utm_medium=copy_link"
                     >
                       <i className="fab fa-instagram"></i>
                     </a>
                     <a
-                      target="_blank" rel="noreferrer"
+                      target="_blank"
+                      rel="noreferrer"
                       href="https://www.tiktok.com/@arcanetokenbnb"
                     >
                       <FontAwesomeIcon
@@ -162,7 +193,8 @@ function Header({ darkSet, click, loadWeb3Modal }) {
                       />
                     </a>
                     <a
-                      target="_blank" rel="noreferrer"
+                      target="_blank"
+                      rel="noreferrer"
                       href="https://youtube.com/channel/UCovNe7JAkU6OCucOf0SOQZw"
                     >
                       {" "}
@@ -173,7 +205,7 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               </div>
               <div className="bottom-bottom">
                 <div className="header_arcane_box">
-                  <a href={foo} >1$ = 0.012829 Arcane </a>
+                  <a href={foo}>1$ = 0.012829 Arcane </a>
                 </div>
                 <div
                   onClick={darker}
@@ -185,15 +217,15 @@ function Header({ darkSet, click, loadWeb3Modal }) {
               </div>
             </li>
           </ul>
-
-          <div className="header_connect">
+          <div className="header_connect desktop-connect">
             <NetworkButton />
-
           </div>
         </div>
         {/* <!-- menu toggler --> */}
         <div className="right-head">
-          {/* <NetworkButton/> */}
+          <div className="header_connect mobile-connect">
+            <NetworkButton />
+          </div>
 
           <img
             className="hamburger mobile-connect"
@@ -208,7 +240,6 @@ function Header({ darkSet, click, loadWeb3Modal }) {
         {/* <!-- overlay --> */}
         <div className={`overlay ${active ? "current" : ""}`}></div>
       </header>
-      
     </>
   );
 }

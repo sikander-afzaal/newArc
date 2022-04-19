@@ -1,3 +1,10 @@
 .token .find-top {
   text-transform: uppercase;
 }
+.token * {
+  overflow-x: visible;
+}
+.token .qr {
+  width: 100%;
+  margin: 0;
+}
