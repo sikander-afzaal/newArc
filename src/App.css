@@ -99,6 +99,9 @@ ol,
 ul {
   list-style: none;
 }
+p {
+  margin: 0 !important;
+}
 a:hover {
   text-decoration: none;
 }

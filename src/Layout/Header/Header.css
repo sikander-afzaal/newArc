@@ -87,6 +87,8 @@ header .menu li:last-child a {
 }
 .menu li a {
   text-decoration: none;
+  font-weight: 500;
+  font-family: "Neo Sans W23 Med";
 }
 .cross {
   display: none !important;
@@ -140,10 +142,13 @@ header .menu li:last-child a {
   display: none;
 }
 .right-head {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.overlay {
+  display: none;
 }
 .switch {
   display: flex;
@@ -202,7 +207,7 @@ header .menu li:last-child a {
     margin-top: 0rem;
   }
 }
-@media screen and (max-width: 1347px) {
+@media screen and (max-width: 1366px) {
   header .menu li a {
     font-size: 1.6rem;
     margin-right: 1.9rem;
@@ -216,11 +221,14 @@ header .menu li:last-child a {
     font-size: 1.8rem;
   }
 }
-@media screen and (max-width: 1247px) {
+@media screen and (max-width: 1276px) {
   .desktop-connect {
     display: none;
   }
   .mobile-connect {
+    display: flex;
+  }
+  .right-head {
     display: flex;
   }
   .soon:before {
@@ -348,6 +356,7 @@ header .menu li:last-child a {
     top: 0;
     pointer-events: none;
     z-index: 1024px;
+    display: block;
     opacity: 0;
   }
   .overlay.current {
