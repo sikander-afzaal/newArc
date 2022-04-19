@@ -9,16 +9,16 @@
   margin-top: 4rem;
   width: 100%;
 }
-.hero::-webkit-scrollbar,
-.slider::-webkit-scrollbar,
-.slider2::-webkit-scrollbar {
+.hero *::-webkit-scrollbar,
+.slider *::-webkit-scrollbar,
+.slider2 *::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.hero,
-.slider,
-.slider2 {
+.hero *,
+.slider *,
+.slider2 * {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
